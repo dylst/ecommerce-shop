@@ -32,6 +32,7 @@ const ProductDetails = ({ product, products }) => {
                 className={
                   i === index ? 'small-image selected-image' : 'small-image'
                 }
+                key={`${item._id}${i}`}
                 onMouseEnter={() => setIndex(i)}
               />
             ))}
@@ -59,9 +60,7 @@ const ProductDetails = ({ product, products }) => {
               <span className='minus' onClick={decreaseQty}>
                 <AiOutlineMinus />
               </span>
-              <span className='num' onClick=''>
-                {qty}
-              </span>
+              <span className='num'>{qty}</span>
               <span className='plus' onClick={increaseQty}>
                 <AiOutlinePlus />
               </span>
@@ -75,7 +74,7 @@ const ProductDetails = ({ product, products }) => {
             >
               Add to Cart
             </button>
-            <button type='button' className='buy-now' onClick=''>
+            <button type='button' className='buy-now' onClick={() => {}}>
               Buy Now
             </button>
           </div>
