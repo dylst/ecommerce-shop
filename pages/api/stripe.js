@@ -11,8 +11,8 @@ export default async function handler(req, res) {
         payment_method_types: ['card'],
         billing_address_collection: 'auto',
         shipping_options: [
-          { shipping_rate: 'shr_1LQPMZICgubJQxcieHHKuU40' },
-          { shipping_rate: 'shr_1LQPNOICgubJQxcinHTKrEPj' },
+          { shipping_rate: 'shr_1LQj1EJMV7ttmd7imjcaMSyD' },
+          { shipping_rate: 'shr_1LQj2OJMV7ttmd7iAV5YiSm6' },
         ],
         line_items: req.body.map((item) => {
           const img = item.image[0].asset._ref;
@@ -39,8 +39,8 @@ export default async function handler(req, res) {
             quantity: item.quantity,
           };
         }),
-        success_url: `${req.headers.origin}/?success=true`,
-        cancel_url: `${req.headers.origin}/?canceled=true`,
+        success_url: `${req.headers.origin}/success`,
+        cancel_url: `${req.headers.origin}/canceled`,
       };
 
       // Create Checkout Sessions from body params.
