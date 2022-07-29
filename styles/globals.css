@@ -245,7 +245,9 @@ span.text-red {
   /* top: -35%;
   left: 8%; */
   top: -25%;
-  left: 25%;
+  left: 30%;
+  width: 450px;
+  height: 450px;
 }
 .banner-desc .right {
   line-height: 1.4;
@@ -747,5 +749,49 @@ span.text-red {
   .btn-container {
     width: 300px;
     margin: auto;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .hero-banner-image {
+    height: 300px;
+    width: 300px;
+    top: 15%;
+    right: 15%;
+  }
+  .footer-banner-image {
+    height: 300px;
+    width: 300px;
+    top: 5%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero-banner-image {
+    height: 250px;
+    width: 250px;
+    top: 28%;
+    right: -3%;
+  }
+  .footer-banner-image {
+    height: 250px;
+    width: 250px;
+    top: 18%;
+    left: 40%;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .hero-banner-image {
+    height: 200px;
+    width: 200px;
+    top: 28%;
+    right: -3%;
+  }
+  .footer-banner-image {
+    height: 200px;
+    width: 200px;
+    top: 18%;
+    left: 40%;
   }
 }
